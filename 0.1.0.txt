@@ -1,0 +1,51 @@
+Revision 0.1.0
+Coral - server development language
+
+Logic and syntax
+
+port - Defines the port on which the server will run.
+create - It defines whether it will be https or http.
+rec - receive request
+ret - return response
+require - defines the server type
+index = defines the default page of the server
+. - define what to do next
+$ - create a function
+
+
+
+
+simple examples:
+
+just a simple server:
+
+create.http <rec, ret> = [
+  ret "Resposta do servidor"
+    ret.end]
+port {3000}
+
+Hosting an HTML page:
+
+require = files
+
+create.https <rec, ret> = [
+  index = "home.html"
+    ret.index] 
+port {3001}
+
+
+download page:
+
+require = files
+
+create.https <rec, ret> = [
+  index = "myapp.html"
+    ret.index] 
+
+$ download (
+rec {/download.html}
+ret 'my-app.apk'
+ret.end)
+
+port {3002}
+
