@@ -9,14 +9,14 @@ Download the Coral.exe compiler > Add the compiler to your system's Path > Open 
 
 # Exemples:
 
-A simple server:
+*A simple server:* <br>
 
 create.http <rec, ret> = [
   ret "Resposta do servidor"
     ret.end]
 port {3000}
 
-Hosting an HTML page:
+*Hosting an HTML page:* <br>
 
 require = files
 
@@ -25,7 +25,7 @@ create.https <rec, ret> = [
     ret.index] 
 port {3001}
 
-download page:
+*download page:* <br>
 
 require = files
 
