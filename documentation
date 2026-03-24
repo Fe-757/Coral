@@ -20,6 +20,7 @@ save - save data or files
 progress - receives the current value of a task being executed and returns
 true
 false
+post
 wait.end - wait end of the process
 "" - returns text
 // - comments
@@ -62,13 +63,16 @@ port {3002}
 
 Upload files to a specific directory:
 
+require = cors
+require = storage
+
 create.https <rec, ret> = [
   index = "myapp.html"
     ret.index] 
 
 $ upload (
-rec {api/upload}.get 
-get{file.filename, file.size}.save = storage{D:\mydrive\files} //D:\ is an external drive, the STORAGE library facilitates dynamic file allocation.
+rec {api/upload}.post
+get{file.filename, file.size}.save = storage{D:files} //D:\ is an external drive, the STORAGE library facilitates dynamic file allocation.
 get.upload progress.wait.end
 if complete
 ret "File saved successfully!"
