@@ -1,0 +1,80 @@
+Revision 0.1.5
+Coral - server development language
+
+0.1.5 changes:
+It is no longer necessary to define the server type (require = files).
+New native libraries: CORS, STORAGE 
+
+Logic and syntax
+
+port - Defines the port on which the server will run.
+create - It defines whether it will be https or http.
+rec - receive request
+ret - return response
+require - defines the modules to be used in the server
+index = defines the default page of the server
+. - define what to do next
+$ - create a function
+file - receive file
+save - save data or files
+progress - receives the current value of a task being executed and returns
+true
+false
+wait.end - wait end of the process
+"" - returns text
+// - comments
+
+
+
+simple examples:
+
+just a simple server:
+
+require = CORS
+create.http <rec, ret> = [
+  ret "Resposta do servidor"
+    ret.end]
+port {3000}
+
+Hosting an HTML page:
+
+
+create.https <rec, ret> = [
+  index = "home.html"
+    ret.index] 
+port {3001}
+
+
+download page:
+
+
+create.https <rec, ret> = [
+  index = "myapp.html"
+    ret.index] 
+
+$ download (
+rec {/download.html}
+ret 'my-app.apk'
+ret.end)
+
+port {3002}
+
+
+Upload files to a specific directory:
+
+create.https <rec, ret> = [
+  index = "myapp.html"
+    ret.index] 
+
+$ upload (
+rec {api/upload}.get 
+get{file.filename, file.size}.save = storage{D:\mydrive\files} //D:\ is an external drive, the STORAGE library facilitates dynamic file allocation.
+get.upload progress.wait.end
+if complete
+ret "File saved successfully!"
+if incomplete
+ret "An error ocurried while uploading"
+
+ret.end)
+
+port {3003}
