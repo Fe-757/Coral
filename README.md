@@ -5,7 +5,12 @@ Coral is a programming language developed exclusively for creating backends in a
 Coral is in a very early stage, version 0.1.0, expect bugs and a lack of features as it is an initial version.
 
 # How to run
-Download the Coral.exe compiler > Add the compiler to your system's Path > Open a directory and create a text file, write the server code, and save it as .coral > Open PowerShell in the file's directory and run: coral filename.coral
+#Windows <br>
+Download the Coral.exe compiler > Add to path or open the directory in the Powershell > Open a directory and create a text file, write the server code and save it as .coral > Open PowerShell in the file's directory and run: coral filename.coral
+
+#Linux <br>
+Download the interpreter file > Compile the code > Add to path or open the directory in the console > create a text file, write the server code and save it as .coral > Open PowerShell in the file's directory and run: coral filename.coral
+
 
 # Exemples:
 
