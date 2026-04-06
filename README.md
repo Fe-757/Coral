@@ -6,10 +6,10 @@ Coral is in a very early stage, version 0.1.5, expect bugs and a lack of feature
 
 # How to run
 #Windows <br>
-Download the Coral.exe compiler > Add to path or open the directory in the Powershell > Open a directory and create a text file, write the server code and save it as .coral > Open PowerShell in the file's directory and run: coral filename.coral
+Download the Coral.exe compiler > Add to path or open the directory in the Powershell > Open a directory and create a text file, write the server code and save it as .coral > Open PowerShell in the file's directory and run: coral *filename*.coral
 
 #Linux <br>
-Download the interpreter file > Compile the code > Add to path or open the directory in the console > create a text file, write the server code and save it as .coral > Open PowerShell in the file's directory and run: coral filename.coral
+Download the interpreter file > Compile the code > Add to path or open the directory in the console > create a text file, write the server code and save it as .coral and run in the terminal: coral *filename*.coral
 
 
 # Exemples:
