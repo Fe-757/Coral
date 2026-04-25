@@ -1,8 +1,10 @@
-# Coral
-Coral is a programming language developed exclusively for creating backends in a simple way.
+Coral >> Anery Server
+
+# Anery server
+Anery server is a programming language developed exclusively for creating backends in a simple way.
 
 # About
-Coral is in a very early stage, version 0.1.5, expect bugs and a lack of features as it is an initial version.
+Anery server is in a very early stage, version 0.1.5, expect bugs and a lack of features as it is an initial version.
 
 # How to run
 #Windows <br>
